@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "@typescript-eslint/tslint"
+  ],
+  "extends": ["plugin:react-hooks/recommended"],
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "functions": "never",
+        "objects": "always-multiline"
+      }
+    ],
+    "curly": "error",
+    "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": "error",
+    "no-unused-vars": "warn",
+    "object-curly-spacing": ["error", "always"],
+    "quote-props": ["error", "consistent"],
+    "semi": ["error", "always"],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "space-in-parens": ["error", "never"]
+  }
+}
