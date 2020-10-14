@@ -39,15 +39,18 @@ const Details: FC<Props> = (props) => {
         }
     }, []);
 
+
     useEffect(() => {
         getData();
     }, []);
+
 
     const onBackPress = useCallback(() => {
         props.changeScreen(SCREENS.players);
     }, []);
 
-    let position = "";
+    let positionStr = "";
+
     const key = player && player.ultraPosition.toString();
     if(key && PLAYER_POSITION.hasOwnProperty(key)){
         //@ts-ignore
@@ -56,7 +59,6 @@ const Details: FC<Props> = (props) => {
 
     return (
         <View style={styles.container}>
-
             <View style={styles.container}>
                 {loading ? (
                     <View style={[styles.container, styles.center]}>
@@ -74,7 +76,7 @@ const Details: FC<Props> = (props) => {
                                 <Text style={styles.textPrimary}>
                                     {player.firstname} {player.lastname}
                                 </Text>
-                                <Text style={styles.textSecondary}>{position}</Text>
+                                <Text style={styles.textSecondary}>{positionStr}</Text>
                                 <Text style={styles.textSecondary}>
                                     {player.club}
                                 </Text>
@@ -93,14 +95,12 @@ const Details: FC<Props> = (props) => {
                                     <Text>{player.stats.appearances.starter}</Text>
                                 </View>
                             </View>
-
                             <View style={styles.buttonWrapper}>
                                 <MainButton
                                     title={"MENU"}
                                     onPress={onBackPress}
                                 />
                             </View>
-
                         </View>
                     )
                 )}

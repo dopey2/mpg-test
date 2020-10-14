@@ -4,15 +4,18 @@ import {
     Text,
     View,
     FlatList,
-    ListRenderItemInfo, ActivityIndicator, TextInput, ScrollView
+    ListRenderItemInfo,
+    ActivityIndicator,
+    TextInput,
+    ScrollView
 } from 'react-native';
 
+import { SCREENS } from "../const/screens";
+import { PLAYER_POSITION } from "../const/positon";
 import { PlayerI } from "../types/PlayerI";
 import { getPlayers } from "../api";
 import PlayerCard from "../components/PlayerCard/PlayerCard";
-import { SCREENS } from "../const/screens";
 import Tag from "../components/Tag/Tag";
-import { PLAYER_POSITION } from "../const/positon";
 
 interface Props {
     changeScreen: (screen: string, props?: string) => void;
@@ -43,10 +46,10 @@ const Players: FC<Props> = (props) => {
         }
     }, []);
 
+
     useEffect(() => {
         getData();
     }, []);
-
 
     useEffect(() => {
         filter();
@@ -76,6 +79,7 @@ const Players: FC<Props> = (props) => {
         setSelectedPosition(position);
     }, []);
 
+
     const renderItem = useCallback((info: ListRenderItemInfo<PlayerI>) => {
         return (
             <PlayerCard
@@ -87,6 +91,7 @@ const Players: FC<Props> = (props) => {
             />
         );
     }, []);
+
 
     return (
             <View style={styles.container}>
@@ -139,7 +144,6 @@ const Players: FC<Props> = (props) => {
                                     })}
 
                                 </ScrollView>
-
                             </View>
                             <FlatList
                                 data={filteredPlayers as Array<PlayerI>}
