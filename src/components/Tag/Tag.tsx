@@ -5,6 +5,7 @@ import {
     Text,
     Pressable
 } from 'react-native';
+import { COLORS } from "../../const/colors";
 
 
 interface Props {
@@ -29,20 +30,20 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 5,
         borderRadius: 50,
-        borderColor: "#45c945",
+        borderColor: COLORS.primary,
         borderWidth: 2,
         alignItems: "center",
         justifyContent: "center",
     },
     text: {
         fontSize: 12,
-        color: "#45c945",
+        color: COLORS.primary,
     },
     selectedTag: {
-        backgroundColor: "#45c945",
+        backgroundColor: COLORS.primary,
     },
     selectedText: {
-        color: "white",
+        color: COLORS.white,
     },
 });
 

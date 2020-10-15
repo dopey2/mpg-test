@@ -1,4 +1,4 @@
-import { CONFIG } from "./const/config";
+import { CONFIG } from "../const/config";
 
 export const getPlayers = async () => {
   try {

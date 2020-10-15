@@ -1,9 +1,11 @@
+import { UltraPositionType } from "./PlayerI";
+
 export interface PlayerStatI {
     "calendar": string,
     club: string;
     firstname: string;
     lastname: string;
-    ultraPosition: number;
+    ultraPosition: UltraPositionType;
     id: string;
     nbMatch: string;
     position: string;
@@ -12,14 +14,13 @@ export interface PlayerStatI {
         appearances: {
             standBy: number;
             standIn: number;
-            starter: number; // titulaire
+            starter: number;
             total: number;
             id: string;
         },
         percentageSaveShot: number;
         percentageStarter: number;
         percentageCleanSheet: number;
-        avgRate: number; // moyenne
-        // ...
+        avgRate: number;
     }
 }

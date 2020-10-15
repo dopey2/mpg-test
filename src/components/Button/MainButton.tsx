@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import {
     StyleSheet,
     View,
     Text,
     Pressable
-} from 'react-native';
+} from "react-native";
+import { COLORS } from "../../const/colors";
 
 
 interface Props {
@@ -27,14 +28,14 @@ const styles = StyleSheet.create({
     button: {
         width: 200,
         height: 48,
-        backgroundColor: "#45c945",
+        backgroundColor: COLORS.primary,
         borderRadius: 5,
         alignItems: "center",
         justifyContent: "center",
     },
     text: {
         fontSize: 20,
-        color: "white",
+        color: COLORS.white,
     },
 });
 

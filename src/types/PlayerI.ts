@@ -1,9 +1,14 @@
+import { ElementType } from "./TypeHelper";
+import { PLAYER_ULTRA_POSITION } from "../const/mpg";
+
+export type UltraPositionType = ElementType<typeof PLAYER_ULTRA_POSITION>
+
 export interface PlayerI {
     id: string,
     firstname: string,
     lastname: string,
     position: number,
-    ultraPosition: 10 | 20 | 21 | 31 | 32 | 40,
+    ultraPosition: UltraPositionType,
     teamId: number,
     quotation: number,
     club: string,
