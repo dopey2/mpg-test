@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import {
     View,
     Text,
@@ -11,16 +11,12 @@ import { S } from "../../utils/styles";
 import { PlayerStatI } from "../../types/PlayerStat";
 import CustomText from "../../components/CustomText/CustomText";
 import LoaderView from "../../components/LoaderView/LoaderView";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { State } from "../reducers";
 import { async_getPlayerDetails } from "./action";
 
-interface Props {
-    id: string;
-    changeScreen: (screen: string, id?: string) => void;
-}
 
-const Details: FC<Props> = (props) => {
+const Details: FC = () => {
 
     const playerId: string = useSelector((s: State) => s.details.id);
     const player: PlayerStatI | null = useSelector((s: State) => s.details.player);
