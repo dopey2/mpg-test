@@ -8,8 +8,9 @@
     "@typescript-eslint",
     "@typescript-eslint/tslint"
   ],
-  "extends": ["plugin:react-hooks/recommended"],
   "rules": {
+    "array-callback-return": "error",
+    "brace-style": "error",
     "comma-dangle": [
       "error",
       {
@@ -19,13 +20,25 @@
       }
     ],
     "curly": "error",
+    "dot-location": ["error", "property"],
+    "function-paren-newline": ["error", "multiline"],
     "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
+    "max-len": ["error", {
+      "code": 120,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "tabWidth": 4
+    }],
+
     "no-multi-spaces": "error",
     "no-multiple-empty-lines": "error",
+    "no-redeclare": "error",
     "no-unused-vars": "warn",
     "object-curly-spacing": ["error", "always"],
+    "operator-linebreak": ["error", "after"],
     "quote-props": ["error", "consistent"],
     "semi": ["error", "always"],
+    "space-before-blocks": "error",
     "space-infix-ops": ["error", { "int32Hint": false }],
     "space-in-parens": ["error", "never"]
   }
