@@ -23,15 +23,13 @@ function* saga_getPlayers() {
         yield put(setPlayersError(""));
     } catch (err) {
         yield put(setPlayersError(STRINGS.error));
-    }
-    finally {
+    } finally {
         yield put(setPlayersLoading(false));
     }
 }
 
-export function* saga_filterPlayers(action: ReturnType<typeof async_filterPlayer>){
+export function* saga_filterPlayers(action: ReturnType<typeof async_filterPlayer>) {
     const players: Array<PlayerI> = yield select(players_selector);
-
     const { search, selectedPosition } = action;
 
     const byPosition = players.filter((player) => {

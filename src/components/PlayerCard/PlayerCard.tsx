@@ -2,7 +2,7 @@ import React, { FC, useCallback } from 'react';
 import {
     StyleSheet,
     View,
-    Text, Pressable
+    Pressable
 } from 'react-native';
 
 import { COLORS } from "../../const/colors";

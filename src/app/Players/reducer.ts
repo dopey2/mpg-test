@@ -1,4 +1,9 @@
-import {SET_FILTERED_PLAYERS, SET_PLAYERS, SET_PLAYERS_ERROR, SET_PLAYERS_LOADING} from "./action";
+import {
+    SET_FILTERED_PLAYERS,
+    SET_PLAYERS,
+    SET_PLAYERS_ERROR,
+    SET_PLAYERS_LOADING
+} from "./action";
 import { PlayerI } from "../../types/PlayerI";
 
 interface PLayersI {

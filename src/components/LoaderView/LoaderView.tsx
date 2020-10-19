@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import {
     View,
     Text,
-    ActivityIndicator,
+    ActivityIndicator
 } from "react-native";
 
 import { STRINGS } from "../../i18n/strings";

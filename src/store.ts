@@ -9,8 +9,9 @@ const realtime = __DEV__;
 const composeEnhancers = composeWithDevTools({ realtime });
 const sagaMiddleware = createSagaMiddleware();
 
-export const store = createStore(reducers, composeEnhancers(
-    applyMiddleware(sagaMiddleware)
-));
+export const store = createStore(
+    reducers,
+    composeEnhancers(applyMiddleware(sagaMiddleware))
+);
 
 sagaMiddleware.run(sagas);

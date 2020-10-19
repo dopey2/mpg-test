@@ -18,7 +18,7 @@ import { async_filterPlayer, async_getPlayers } from "./action";
 import PlayersFilter from "./components/PlayersFilter";
 import PlayerCard from "../../components/PlayerCard/PlayerCard";
 import LoaderView from "../../components/LoaderView/LoaderView";
-import {setPlayerDetailsId} from "../Details/action";
+import { setPlayerDetailsId } from "../Details/action";
 
 interface Props {
     componentId: string;
@@ -46,14 +46,12 @@ const Players: FC<Props> = (props) => {
 
     const onPressPlayer = useCallback((id: string) => {
         dispatch(setPlayerDetailsId(id));
-        Navigation.push(
-            props.componentId, {
+        Navigation.push(props.componentId, {
                 component: {
                     name: SCREENS.details,
                     passProps: { id },
                 },
-            }
-        );
+        });
     }, []);
 
     const onChangeSearch = useCallback((text) => {

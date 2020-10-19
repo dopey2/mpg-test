@@ -16,11 +16,9 @@ export function* saga_getPlayerDetails(action: ReturnType<typeof async_getPlayer
         const player = yield call(getPlayerDetail, id.replace("player_", ""));
         yield put(setPlayerDetails(player));
         yield put(setPlayerDetailsError(""));
-    }
-    catch(err) {
+    } catch(err) {
         yield put(setPlayerDetailsError(STRINGS.error));
-    }
-    finally {
+    } finally {
         yield put(setPlayerDetailsLoading(false));
     }
 }

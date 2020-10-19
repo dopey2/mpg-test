@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import {ScrollView, StyleSheet, TextInput, View} from "react-native";
+import { ScrollView, StyleSheet, TextInput, View } from "react-native";
 import Tag from "../../../components/Tag/Tag";
 import { S } from "../../../utils/styles";
 import { PLAYER_ULTRA_POSITION } from "../../../const/mpg";
 import { mapPositionToString } from "../../../utils/playerUtils";
-import {COLORS} from "../../../const/colors";
+import { COLORS } from "../../../const/colors";
 
 interface Props {
     search: string;
